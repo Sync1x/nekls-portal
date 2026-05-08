@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowRight, Info, LockKeyhole, Mail } from "lucide-react"
 
+import { NEKLSLogo } from "@/components/NEKLSLogo"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -57,12 +58,17 @@ export function LoginForm({ role }: LoginFormProps) {
   return (
     <Card className="portal-card mx-auto w-full max-w-md rounded-[2rem] p-2 shadow-xl shadow-[#3B5584]/10">
       <CardHeader className="px-6 pt-6">
-        <CardTitle className="text-3xl font-semibold text-[#3B5584]">
-          {roleCopy[role].title}
-        </CardTitle>
-        <CardDescription className="text-base leading-7 text-[#5A6D8D]">
-          {roleCopy[role].description}
-        </CardDescription>
+        <div className="flex items-center gap-4">
+          <NEKLSLogo compact />
+          <div>
+            <CardTitle className="text-3xl font-semibold text-[#3B5584]">
+              {roleCopy[role].title}
+            </CardTitle>
+            <CardDescription className="text-base leading-7 text-[#5A6D8D]">
+              {roleCopy[role].description}
+            </CardDescription>
+          </div>
+        </div>
       </CardHeader>
       <CardContent className="px-6 pb-6">
         <div className="mb-5 flex gap-3 rounded-3xl border border-[#E2D1B0]/70 bg-[#E2D1B0]/20 p-4 text-sm text-[#3B5584]">

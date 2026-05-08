@@ -2,8 +2,9 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LogOut, Sparkles, UserRound } from "lucide-react"
+import { LogOut, UserRound } from "lucide-react"
 
+import { NEKLSLogo } from "@/components/NEKLSLogo"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { clearDemoSession, type UserRole } from "@/lib/auth"
@@ -49,9 +50,7 @@ export function TopNav({ mode }: TopNavProps) {
             href={`/${mode}/dashboard`}
             className="flex items-center gap-3 text-[#3B5584]"
           >
-            <span className="flex size-12 items-center justify-center rounded-3xl border border-[#E2D1B0]/70 bg-[#E2D1B0]/45 shadow-sm shadow-[#3B5584]/10">
-              <Sparkles className="size-5" aria-hidden="true" />
-            </span>
+            <NEKLSLogo compact />
             <span className="min-w-0">
               <span className="block text-lg font-semibold leading-5 tracking-normal">
                 NEKLS Portal

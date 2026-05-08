@@ -1,3 +1,4 @@
+import { NEKLSLogo } from "@/components/NEKLSLogo"
 import { cn } from "@/lib/utils"
 
 type PortalHeaderProps = {
@@ -15,6 +16,7 @@ export function PortalHeader({
 }: PortalHeaderProps) {
   return (
     <header className={cn("mx-auto max-w-3xl text-center", className)}>
+      <NEKLSLogo className="mx-auto mb-6" />
       {eyebrow ? (
         <p className="portal-pill mx-auto mb-4 w-fit text-sm">
           {eyebrow}
